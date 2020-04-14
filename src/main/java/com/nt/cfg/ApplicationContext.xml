@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="baseCar" class="com.sb.beans.Car" abstract="true">
+<constructor-arg name="color" value="White"/>
+<constructor-arg name="makeCompnay" value="honda"/>
+<constructor-arg name="fueltype" value="disel"/>
+<constructor-arg name="modelNmae" value="Civic"/>
+<constructor-arg name="varient" value="ZDI"/>
+<constructor-arg name="engineCC" value="1560"/>
+<constructor-arg name="type" value="luxory"/>
+</bean>
+<bean id="satyaCar" class="com.sb.beans.Car" parent="baseCar" >
+<constructor-arg name="regNo" value="38027"/>
+<constructor-arg name="ownerName" value="Vaskar"/>
+<constructor-arg name="varient" value="VDI"/>
+</bean>
+<bean id="babyCar" class="com.sb.beans.Car" parent="baseCar">
+<constructor-arg name="regNo" value="4y389f"/>
+<constructor-arg name="ownerName" value="Rashmi"/>
+<constructor-arg name="color" value="Blue"/>
+</bean>
+</beans>
